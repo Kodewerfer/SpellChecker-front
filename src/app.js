@@ -204,6 +204,10 @@ export default class App extends React.Component {
     return (
       <div className='home-wrapper'>
 
+        <div className="top-static-content">
+          <h1>Spell Checker</h1>
+        </div>
+
         <div className="content-wrapper">
 
           {this.renderGuide()}
