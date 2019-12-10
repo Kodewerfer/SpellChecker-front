@@ -1,0 +1,267 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 0;
+}
+
+body {
+  background-color: #4F2D7F !important;
+}
+
+.home-wrapper {
+  height: 100%;
+  padding: 25px 0;
+  position: relative;
+  width: 90%;
+  text-align: left;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.top-static-content {
+  overflow: hidden;
+  display: flex;
+  height: 30%;
+  color: white;
+  padding-bottom: 1em;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.top-static-content span {
+  font-weight: 300;
+  color: #8f8f8f;
+}
+
+.top-static-content span.green {
+  font-weight: 500;
+  color: green;
+}
+
+.content-wrapper {
+  position: relative;
+  /* overflow: hidden; */
+  height: 70%;
+  border-radius: 15px;
+  background-color: #fff;
+  display: flex;
+}
+
+.content-wrapper>div {
+  height: 100%;
+  /* display: inline-block; */
+  padding: 15px;
+}
+
+.input-area {
+  width: 65%;
+}
+
+.input-area>textarea {
+  height: 100%;
+  width: 100%;
+  border: 0;
+  font-size: 1.25em;
+  resize: none;
+  outline: none !important;
+}
+
+.correction-area {
+  position: relative;
+  width: 35%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* background-color: rgb(195, 163, 240); */
+}
+
+.correction-item {
+  height: 2.5em;
+  position: relative;
+  margin-bottom: 0.5em;
+  border: 1px dashed #8f8f8f;
+  /* box-shadow: .5em .5em .5em #8f8f8f; */
+}
+
+.correction-item.expanded {
+  border: 0;
+  height: auto;
+}
+
+
+.correction-item a {
+  height: 100%;
+  position: relative;
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+
+.correction-item a h3 {
+  position: relative;
+  z-index: 2;
+}
+
+.correction-item a .slider {
+  content: ' ';
+  position: absolute;
+  z-index: 1;
+  display: block;
+  height: 100%;
+  width: 0;
+}
+
+.correction-item a .slider .slider-head {
+  display: block;
+  height: 100%;
+  width: 0;
+  background-color: #0c0c0c93;
+  content: ' ';
+}
+
+.correction-item a:hover {
+  text-decoration: none;
+}
+
+.correction-item a:hover .slider {
+  transition: width 0.2s ease-in-out, background-color 0.5s;
+  width: 100%;
+  background-color: #dfdfdf98;
+}
+
+.correction-item a:hover .slider .slider-head {
+  width: 0.6em;
+  transition: width 0.1s ease;
+}
+
+
+.correction-item a .details {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  border: 2px rgb(233, 86, 86) dashed;
+  /* border-color: rgb(233, 86, 86); */
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-right: .5em;
+  padding-left: 3em;
+  text-align: left;
+}
+
+.correction-item a .details.noRes {
+  align-items: center !important;
+}
+
+.correction-item a .details span.original {
+  width: 35%;
+}
+
+.correction-item a .details .corrections {
+  width: 65%;
+}
+
+.correction-item a .details span.hitCount {
+  padding-left: 1.25em;
+  color: #8f8f8f;
+  font-size: .8em;
+}
+
+span.noRes {
+  color: #7e7e7e;
+}
+
+span.original {
+  padding-bottom: .35em;
+  display: inline-block;
+  color: rgb(233, 86, 86);
+}
+
+span.correct {
+  padding-bottom: .35em;
+  display: inline-block;
+  color: #0ef10e;
+}
+
+span.placeholder {
+  padding-left: 1.8em;
+}
+
+.arrow {
+  position: absolute;
+  z-index: 1;
+  width: 5em;
+  height: 5em;
+  fill: #d4b5ff !important;
+  transform: rotate(55deg);
+}
+
+.arrow path {
+  stroke: #be93fa;
+  stroke-width: 0.5;
+  stroke-dasharray: .05em;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.guiding-area {
+  position: relative;
+}
+
+.guide {
+  position: absolute;
+  top: -5.5em;
+  z-index: 99 !important;
+}
+
+.guide:hover {
+  animation: jello ease-in-out 400ms;
+}
+
+.guide .text-box {
+  position: relative;
+  color: black;
+  font-weight: 500;
+  background-color: #fff;
+  border: 2px dashed #be93fa;
+  z-index: 3;
+  border-radius: .5em;
+  padding: 0.5em;
+  box-shadow: .35em .25em 1em #be93fa;
+
+}
+
+.guide.left {
+  left: 5%;
+}
+
+.guide.left .arrow {
+  top: 2.5em;
+  left: 1.5em;
+}
+
+.guide.right {
+  right: 10%;
+}
+
+.guide.right .arrow {
+  top: 4em;
+}
+
+.guide.right .arrow {
+  transform: rotate(95deg);
+}
+
+.red {
+  color: red;
+}
